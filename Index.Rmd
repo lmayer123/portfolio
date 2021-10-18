@@ -1,0 +1,97 @@
+---
+title: "Portfolio | VIS 2128"
+author: "Lindsey Mayer"
+date: "10/18/2021"
+output: 
+  html_document:
+    theme: cerulean
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+install.packages(c("usethis", "gitcreds", "gh"))
+```
+
+# Overview
+
+This portfolio includes a selection of different maps I created in a Spatial Analysis graduate course. As someone who never dreamed of touching code or had not heard of RStudio before starting this program, this compilation celebrates some of the skills I learned to visualize data.  
+
+The series of maps mainly focuses on the city of Washington, D.C. utilizing R Studio and ArcGIS. The selected maps will show how the built environment of the city has shifted, in addition to different modes of transportation and show different ways of assessing access b transit, bicycle and on foot. The final image is of Queens, NY, that shows how one could engage with census data. 
+
+# Georeferencing 
+
+## Map of Washington, D.C., 1820
+[![](thumbnails/DC_1820.jpg)]( https:// https://lmayer123.github.io/portfolio/fullsize/ DC_1820.pdf){target="_blank"}
+
+## Bike Paths, 2021
+Starting with a hand drawn map of Washington, D.C. from 1820, we layered current bike paths to show the dramatic shift of the city’s built environment. 
+
+This map demonstrates several skills including:
+
+* Utilizing ArcGIS to georeference a map 
+* Plotting a georeferenced image with vector data
+
+[![](thumbnails/Historic_BikePaths.jpg)]( https:// https://lmayer123.github.io/portfolio/fullsize/ Historic_BikePaths.pdf){target="_blank"}
+
+## Historic Landmarks as Public Spaces
+This map shows the many historic landmarks throughout D.C. The purpose of this map was to contextualize the different types of public spaces throughout the city. Similar to the above image, this image shows how the built environment dramatically expanded beyond the boundaries in the 19th century. 
+
+[![](thumbnails/Historic_Landmarks.jpg)]( https:// https://lmayer123.github.io/portfolio/fullsize/ Historic_Landmarks.pdf){target="_blank"}
+
+# Assessing Access
+## Transit Times to Nearest Library 
+An isochrone map shows reachable locations within a specified limit by a specified mode of transport. I used this technique to show transit travel times to the nearest library.  For the city of D.C., libraries are now part of a digital inclusion initiative, serving as places with free Wi-Fi, computer access, and digital resources. This map shows the time it would take to get to the nearest library by ten-minute increments, revealing that while there are neighborhoods throughout that can access a library within 10 minutes, the majority are 30 minutes and above. 
+The skills used here:
+
+* Displaying multiple vector layers on the same map
+* Calculating and displaying accessibility, based on travel time
+
+[![](thumbnails/Isochrones_Transit.jpg)]( https:// https://lmayer123.github.io/portfolio/fullsize/isochrones_transit.pdf){target="_blank"}
+
+## Transit stops within a 5-minute walk 
+This map shows the number of transit stops within a five-minute walk from each point in the grid. 
+It demonstrates the following skills:
+* Displaying multiple vector layers on the same map
+* Calculating and displaying accessibility, based on travel time
+* Utilizing the distance-decay function
+
+[![](thumbnails/Transit Stops_5Min.jpg)]( https:// https://lmayer123.github.io/portfolio/fullsize/Transit Stops_5Min.pdf){target="_blank"}
+
+
+## Transit Accessibility Score 
+This map calculates a score to assess the availability of transit stops throughout D.C. Utilizing the step decay and exponential functions, it implies that accessibility decreases exponentially with distance, and will decrease by one-half for every five minutes. In other words, bright white color shows the center is rich with transit options and consistently decreases to dark purple/black as less options are available and are further away. 
+
+This map demonstrates the following skills:
+
+* Displaying multiple vector layers on the same map
+* Calculating and displaying accessibility, based on travel time
+* Applying the step decay and exponential functions
+
+[![](thumbnails/Score_Transit.jpg)]( https:// https://lmayer123.github.io/portfolio/fullsize/Score_Transit.pdf){target="_blank"}
+
+
+## Pedestrian Access to Transit Stops
+This map, using a raster layer, shows the walkability of transit stops throughout D.C. Using the Wes Anderson palette for the scale differentiates the different levels of access. 
+
+This maps shows:
+
+* Calculating and displaying accessibility, based on travel time
+* Displaying raster data on a map
+[![](thumbnails/Pedestrian_Raster.jpg)]( https:// https://lmayer123.github.io/portfolio/fullsize/pedestrian_raster.pdf){target="_blank"}
+
+# Interactive Map
+## Older Residents in Queens, NY
+This map shows residents that are 65 years and older in Queens, New York. 
+
+This interactive map demonstrates the following skills: 
+
+* Displaying data on an interactive map
+* Working with U.S. census data to show demographic information in a specific area
+* Utilizing different commands within the Leaflet package to change color and basemap themes
+
+
+[![](thumbnails/Seniors.jpg](https:// https://lmayer123.github.io/portfolio/fullsize/Seniors.pdf){target="_blank"}
